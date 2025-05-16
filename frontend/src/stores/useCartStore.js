@@ -6,10 +6,10 @@ import { i } from "framer-motion/client";
 
 export const useCartStore = create((set, get) => ({
 	cart: [],
-	coupon: null,
+	//coupon: null,
 	total: 0,
 	subtotal: 0,
-	isCouponApplied: false,
+	//isCouponApplied: false,
 
 	/*getMyCoupon: async () => {
 		try {

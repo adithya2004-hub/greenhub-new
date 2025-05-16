@@ -12,6 +12,7 @@ import CategoryPage from './pages/CategoryPage.jsx';
 import CartPage from './pages/CartPage.jsx'
 
 
+
 function App() {
   const {user , checkAuth , checkingAuth} = useUserStore();
   useEffect(() => {
@@ -34,6 +35,7 @@ function App() {
       <Route path='/secret-dashboard' element={user?.role === "admin" ? <AdminPage /> : <Navigate to='/login' />} />
 			<Route path='/category/:category' element={<CategoryPage />} />
 			<Route path='/cart' element={user ? <CartPage /> : <Navigate to='/login' />} />
+      
     </Routes>
     </div>
     <Toaster/>

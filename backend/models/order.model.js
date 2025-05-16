@@ -31,6 +31,25 @@ const orderSchema = new mongoose.Schema(
 			required: true,
 			min: 0,
 		},
+		ShippingAddress: {
+			type: String,
+			required: true,
+		},
+		pin:{
+			type: String,
+			required: true,
+		},
+		landmark:{
+
+		},
+		paymentMethod: {
+			type: String,
+			required: true,
+		},
+		status: {
+			type: String,
+			required: true,
+		},
 		RazorpaySessionId: {
 			type: String,
 			unique: true,

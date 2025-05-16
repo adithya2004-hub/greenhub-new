@@ -1,6 +1,6 @@
-import { useState } from "react"
-import { motion } from "framer-motion"
-import { PlusCircle,Upload,Loader } from "lucide-react"
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { PlusCircle,Upload,Loader } from "lucide-react";
 import { useProductStore } from "../stores/useProductStore.js";
 const categories = ['pots','tools','seeds','fertilizers'];
 const CreateProductForm = () => {
@@ -93,6 +93,7 @@ const CreateProductForm = () => {
 						value={newProduct.price}
 						onChange={(e) => setNewProduct({ ...newProduct, price: e.target.value })}
 						step='0.01'
+						min="1"
 						className='mt-1 block w-full bg-gray-700 border border-gray-600 rounded-md shadow-sm 
 						py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500
 						 focus:border-emerald-500'
@@ -144,7 +145,8 @@ const CreateProductForm = () => {
 						name='quantity'
 						value={newProduct.quantity}
 						onChange={(e) => setNewProduct({ ...newProduct, quantity: e.target.value === "" ? "" : Number(e.target.value)  })}
-						step='0.01'
+						step='1'
+						min="1"
 						className='mt-1 block w-full bg-gray-700 border border-gray-600 rounded-md shadow-sm 
 						py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500
 						 focus:border-emerald-500'
